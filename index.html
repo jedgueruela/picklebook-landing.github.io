@@ -1,0 +1,754 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&family=Host+Grotesk:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/app.css">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>    
+<body>
+    <div class="bg-pickle-green text-center text-white px-4 py-2">
+        <p class="text-[0.88rem] leading-5">
+            50% Off Orders $49, 40% Off Orders $29+ - Code: SAVE50, Ends Wed, Apr 9 <a href="#" class="underline inline-block ms-3">See promo details</a>
+        </p>
+    </div>
+
+    <header class="bg-white sticky top-0 z-99 border-b-1 lg:border-0 border-b-slate-300">
+        <div class="max-w-[1440px] mx-auto px-6 py-4 flex flex-wrap items-center">
+            <div class="flex items-center justify-between shrink-0 grow lg:grow-0 w-full lg:w-auto lg:me-6 xl:me-10">
+                <a href="/"><img src="/img/logo.png" alt="logo"></a>
+
+                <button id="menu-button" class="lg:hidden">
+                    <svg id="menu-button-open" xmlns="http://www.w3.org/2000/svg" class="size-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-menu-icon lucide-menu"><path d="M4 12h16"/><path d="M4 18h16"/><path d="M4 6h16"/></svg>
+                    <svg id="menu-button-close" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16" style="display:none">
+                        <path d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8z"/>
+                    </svg>
+                </button>
+            </div>
+
+            <div id="nav" class="hidden lg:flex flex-col lg:flex-row items-center grow">
+                <nav class="flex flex-col lg:flex-row lg:items-center lg:gap-6 xl:gap-10 lg:me-auto w-full lg:w-auto border-b-1 lg:border-0 border-b-slate-300 my-4 lg:my-0">
+                    <a href="#how-it-works" class="font-medium py-2 lg:py-0 border-t-1 lg:border-0 border-t-slate-300">How it works</a>
+                    <a href="#why-choose-pickle-book" class="font-medium py-2 lg:py-0 border-t-1 lg:border-0 border-t-slate-300">Why choose PICkle book</a>
+                    <a href="#subscription" class="font-medium py-2 lg:py-0 border-t-1 lg:border-0 border-t-slate-300">Subscription</a>
+                    <a href="#faq" class="font-medium py-2 lg:py-0 border-t-1 lg:border-0 border-t-slate-300">FAQ</a>
+                </nav>
+
+                <nav class="flex items-center space-x-3">
+                    <a href="#" title="twitter">
+                        <span class="inline-flex items-center justify-center size-8 rounded-full bg-pickle-green">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="size-4 fill-white" viewBox="0 0 16 16">
+                              <path d="M12.6.75h2.454l-5.36 6.142L16 15.25h-4.937l-3.867-5.07-4.425 5.07H.316l5.733-6.57L0 .75h5.063l3.495 4.633L12.601.75Zm-.86 13.028h1.36L4.323 2.145H2.865z"/>
+                            </svg>
+                        </span>
+                    </a>
+                    <a href="#" title="instagram">
+                        <span class="inline-flex items-center justify-center size-8 rounded-full bg-pickle-green">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="size-4 fill-white" viewBox="0 0 16 16">
+                                <path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.9 3.9 0 0 0-1.417.923A3.9 3.9 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.9 3.9 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.9 3.9 0 0 0-.923-1.417A3.9 3.9 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599s.453.546.598.92c.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.5 2.5 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.5 2.5 0 0 1-.92-.598 2.5 2.5 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233s.008-2.388.046-3.231c.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92s.546-.453.92-.598c.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92m-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217m0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334"/>
+                            </svg>
+                        </span>
+                    </a>
+                    <a href="#" title="facebook">
+                        <span class="inline-flex items-center justify-center size-8 rounded-full bg-pickle-green">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="size-4 fill-white" viewBox="0 0 16 16">
+                                <path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951"/>
+                            </svg>
+                        </span>
+                    </a>
+                    <a href="#" class="inline-flex items-center space-x-2 font-medium bg-cream-green text-pickle-green border-1 border-pickle-green rounded-full ps-6 pe-1 py-1">
+                        <span>Get in touch</span>
+                        <span class="inline-flex items-center justify-center size-8 rounded-full bg-pickle-green">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="size-4 fill-white" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd" d="M8.636 3.5a.5.5 0 0 0-.5-.5H1.5A1.5 1.5 0 0 0 0 4.5v10A1.5 1.5 0 0 0 1.5 16h10a1.5 1.5 0 0 0 1.5-1.5V7.864a.5.5 0 0 0-1 0V14.5a.5.5 0 0 1-.5.5h-10a.5.5 0 0 1-.5-.5v-10a.5.5 0 0 1 .5-.5h6.636a.5.5 0 0 0 .5-.5"/>
+                                <path fill-rule="evenodd" d="M16 .5a.5.5 0 0 0-.5-.5h-5a.5.5 0 0 0 0 1h3.793L6.146 9.146a.5.5 0 1 0 .708.708L15 1.707V5.5a.5.5 0 0 0 1 0z"/>
+                            </svg>
+                        </span>
+                    </a>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="max-w-[1440px] mx-auto px-6 py-12 lg:py-40 relative">
+            <h1 class="font-semibold mb-5 max-w-[530px]">
+                Turn your memories Into <span class="bg-[url('/img/underline-cream.png')] bg-no-repeat bg-bottom">monthly magic</span>
+            </h1>
+
+            <p class="max-w-[460px] mb-8">
+                PICkle Book delivers a beautifully printed photo book to your door every month-automagically. Relive your favorite moments without lifting a finger.
+            </p>
+
+            <a href="#" class="inline-flex items-center space-x-2 font-medium bg-pickle-green text-white border-1 border-pickle-green rounded-full ps-6 pe-1 py-1">
+                <span>Get started today</span>
+                <span class="inline-flex items-center justify-center size-8 rounded-full bg-lime-green">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="size-4 fill-white" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd" d="M8.636 3.5a.5.5 0 0 0-.5-.5H1.5A1.5 1.5 0 0 0 0 4.5v10A1.5 1.5 0 0 0 1.5 16h10a1.5 1.5 0 0 0 1.5-1.5V7.864a.5.5 0 0 0-1 0V14.5a.5.5 0 0 1-.5.5h-10a.5.5 0 0 1-.5-.5v-10a.5.5 0 0 1 .5-.5h6.636a.5.5 0 0 0 .5-.5"/>
+                        <path fill-rule="evenodd" d="M16 .5a.5.5 0 0 0-.5-.5h-5a.5.5 0 0 0 0 1h3.793L6.146 9.146a.5.5 0 1 0 .708.708L15 1.707V5.5a.5.5 0 0 0 1 0z"/>
+                    </svg>
+                </span>
+            </a>
+
+            <p class="mt-14">Coming Soon - PICkle Book App!</p>
+
+            <div class="mt-6 flex space-x-2">
+                <a href="#">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg" class="h-12">
+                </a>
+                <a href="#">
+                    <img src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg" class="h-12">
+                </a>
+            </div>
+            <img src="/img/jumbotron.png" alt="jumbotron" class="lg:absolute lg:bottom-0 lg:right-4 lg:-mb-12 xl:-mb-24 mt-10 lg:mt-0 w-full lg:w-auto max-w-[680px] xl:max-w-none mx-auto">
+        </section>
+
+        <section class="marquee-container relative overflow-hidden py-12 lg:py-24">
+            <div id="marquee" class="marquee-image"></div>
+        </section>
+
+        <section id="how-it-works" class="max-w-[1280px] mx-auto px-6 py-12">
+            <div class="text-center mb-12">
+                <h2 class="font-semibold mb-4">How PICkle Book Works</h2>
+
+                <p>Simple. Seamless. Sent To You.</p>
+            </div>
+            
+            <div class="grid lg:grid-cols-2 gap-6">
+                <div class="grid grid-rows-2 gap-6">
+                    <div class="bg-muted-yellow flex flex-col justify-between pt-10 px-10 bg-gray-100 rounded-xl overflow-hidden">
+                        <span class="inline-flex items-center justify-center bg-white size-10 rounded-full text-xl font-semibold">1</span>
+
+                        <div class="flex justify-center flex-wrap lg:flex-nowrap lg:self-end gap-4 mt-8 lg:mt-0">
+                            <div class="lg:self-center w-full lg:w-auto text-center lg:text-left">
+                                <h3 class="font-semibold">Snap &amp; Save</h3>
+
+                                <p>Take your favorite photos throughout the month.</p>
+                            </div>
+                            
+                            <img src="/img/how-1.png" class="lg:self-end lg:max-w-[220px] xl:max-w-none" />
+                        </div>
+                    </div>
+
+                    <div class="bg-bay-blue flex flex-col justify-between pt-10 px-10 rounded-xl overflow-hidden">
+                        <span class="inline-flex items-center justify-center bg-white size-10 rounded-full text-xl font-semibold">2</span>
+
+                        <div class="flex justify-center flex-wrap lg:flex-nowrap lg:self-end gap-4 mt-8 lg:mt-0">
+                            <div class="lg:self-center w-full lg:w-auto text-center lg:text-left">
+                                <h3 class="font-semibold">We PICkle It</h3>
+
+                                <p>Our smart system selects your top—notch shots-or you can choose your own!</p>
+                            </div>
+                            
+                            <img src="/img/how-2.png" class="lg:self-end lg:-me-10 lg:max-w-[270px] xl:max-w-none" />
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-mint-green flex flex-col p-10 rounded-xl overflow-hidden">
+                    <span class="inline-flex items-center justify-center bg-white size-10 rounded-full text-xl font-semibold">3</span>
+
+                    <div class="self-center gap-4">
+                        <img src="/img/how-3.png" class="mx-auto">
+                        <div class="text-center">
+                            <h3 class="font-semibold">Print &amp; Ship</h3>
+
+                            <p class="mb-8">We print and send a high—quality photo book to your door. Like clockwork.</p>
+
+                            <a href="#" class="inline-flex items-center space-x-2 font-medium bg-pickle-green text-white border-1 border-pickle-green rounded-full ps-6 pe-1.5 py-1.5 text-lg">
+                                <span>See pricing plan</span>
+                                <span class="inline-flex items-center justify-center size-8 rounded-full bg-lime-green">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="size-4 fill-white" viewBox="0 0 16 16">
+                                        <path fill-rule="evenodd" d="M8.636 3.5a.5.5 0 0 0-.5-.5H1.5A1.5 1.5 0 0 0 0 4.5v10A1.5 1.5 0 0 0 1.5 16h10a1.5 1.5 0 0 0 1.5-1.5V7.864a.5.5 0 0 0-1 0V14.5a.5.5 0 0 1-.5.5h-10a.5.5 0 0 1-.5-.5v-10a.5.5 0 0 1 .5-.5h6.636a.5.5 0 0 0 .5-.5"/>
+                                        <path fill-rule="evenodd" d="M16 .5a.5.5 0 0 0-.5-.5h-5a.5.5 0 0 0 0 1h3.793L6.146 9.146a.5.5 0 1 0 .708.708L15 1.707V5.5a.5.5 0 0 0 1 0z"/>
+                                    </svg>
+                                </span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="why-choose-pickle-book" class="max-w-[1280px] mx-auto px-6 py-12 lg:py-24">
+            <div class="text-center mb-12 lg:mb-24">
+                <h2 class="font-semibold mb-4">Why Choose PICkle Book?</h2>
+                <p>Because Your Memories Deserve More Than the Cloud.</p>
+            </div>
+
+            <div class="space-y-12 lg:space-y-24">
+                <div class="flex flex-col lg:flex-row gap-8 items-center justify-center">
+                    <div class="max-w-[510px] order-2">
+                        <h3 class="font-semibold mb-2">Effortless Memories, Delivered Monthly</h3>
+                        <p>No more forgetting to print your photos. PICkle Book automatically turns your favorite moments into a beautifully printed photo book—sent right to your door every month.</p>
+                    </div>
+                    <div class="max-w-[510px] order-1">
+                        <img src="/img/why-1.png" class="rounded-xl" />
+                    </div>
+                </div>
+
+                <div class="flex flex-col lg:flex-row gap-8 items-center justify-center">
+                    <div class="max-w-[510px] order-2 lg:order-1">
+                        <h3 class="font-semibold mb-2">High—Quality, Eco—Friendly Printing</h3>
+                        <p>Each book is professionally printed using sustainable materials, so your memories look amazing and feel good for the planet.</p>
+                    </div>
+                    <div class="max-w-[510px] order-1 lg:order-2">
+                        <img src="/img/why-2.png" class="rounded-xl" />
+                    </div>
+                </div>
+
+                <div class="flex flex-col lg:flex-row gap-8 items-center justify-center">
+                    <div class="max-w-[510px] order-2">
+                        <h3 class="font-semibold mb-2">Made for Real Life</h3>
+                        <p>Whether it's a baby first steps, weekend getaways, or everyday moments—PICkle Book helps you hold onto life's highlights, without the hassle of traditional photo albums.</p>
+                    </div>
+                    <div class="max-w-[510px] order-1">
+                        <img src="/img/why-3.png" class="rounded-xl" />
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="bg-cream-green py-48 lg:py-64">
+            <div class="max-w-[1280px] mx-auto px-6">
+                <div class="flex flex-col items-center text-center space-y-5 relative">
+                    <span class="inline-flex items-center justify-center bg-lime-green size-12 rounded-full">
+                        <img src="/img/quote.svg" class="size-4" />
+                    </span>
+
+                    <blockquote class="text-[1.77rem] leading-[2.44rem] font-semibold">
+                        "I used to forget to print my photos—now I get a monthly surprise <span class="text-lime-green">filled with joy!</span>"
+                    </blockquote>
+
+                    <p class="max-w-[970px]">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolorem impedit sint ab facilis ea incidunt accusamus voluptatibus itaque sit temporibus pariatur rem, ipsum dolores alias architecto. Amet molestiae autem rerum.</p>
+
+                    <div>
+                        <p class="mb-2"><span class="font-bold">Emily R.</span></p>
+
+                        <div class="flex space-x-1">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="size-5 fill-yellow-400" viewBox="0 0 16 16">
+                                <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+                            </svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" class="size-5 fill-yellow-400" viewBox="0 0 16 16">
+                                <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+                            </svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" class="size-5 fill-yellow-400" viewBox="0 0 16 16">
+                                <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+                            </svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" class="size-5 fill-yellow-400" viewBox="0 0 16 16">
+                                <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+                            </svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" class="size-5 fill-yellow-400" viewBox="0 0 16 16">
+                                <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+                            </svg>
+                        </div>
+                    </div>
+
+                    <img src="/img/quote-1.png" class="absolute top-0 left-0 -mt-32 rotate-10 w-40 lg:w-auto" />
+                    <img src="/img/quote-2.png" class="absolute top-0 right-0 -mt-32 xl:-mt-28 rotate-10 w-40 lg:w-auto" />
+                    <img src="/img/quote-3.png" class="absolute bottom-0 left-0 -mb-24 w-40 lg:w-auto" />
+                    <img src="/img/quote-4.png" class="absolute bottom-0 right-0 -mb-28 w-40 lg:w-auto" />
+                </div>
+            </div>
+        </section>
+
+        <section class="slider-container">
+            <div class="slider" id="slider">
+                <div class="slide">
+                    <img src="/img/slider.png" />
+                </div>
+                
+                <div class="slide">
+                    <img src="/img/slider.png" />
+                </div>
+                
+                <div class="slide">
+                    <img src="/img/slider.png" />
+                </div>
+                
+                <div class="slide">
+                    <img src="/img/slider.png" />
+                </div>
+            </div>
+            
+            <div class="nav-arrow prev" id="prevBtn">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="#ffffff" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-move-left-icon lucide-move-left"><path d="M6 8L2 12L6 16"/><path d="M2 12H22"/></svg>
+            </div>
+            <div class="nav-arrow next" id="nextBtn">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="#ffffff" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-move-right-icon lucide-move-right"><path d="M18 8L22 12L18 16"/><path d="M2 12H22"/></svg>
+            </div>
+            
+            <div class="pagination" id="pagination">
+                <div class="pagination-dot active" data-index="0"></div>
+                <div class="pagination-dot" data-index="1"></div>
+                <div class="pagination-dot" data-index="2"></div>
+                <div class="pagination-dot" data-index="3"></div>
+            </div>
+        </section>
+
+        <section id="subscription" class="bg-pickle-green text-white">
+            <div class="max-w-[1280px] mx-auto px-6 py-12 lg:py-24 relative">
+                <div class="absolute right-0 bottom-0 lg:-mb-36 opacity-40 lg:opacity-100">
+                    <img src="/img/app-screen.png" />
+                </div>
+
+                <div class="max-w-[400px] relative">
+                    <h2 class="font-semibold mb-5">Coming Soon — PICkle Book App</h2>
+                    <p class="mb-8">Track your photo books, upload on-the-go, customize layouts, and preview next month's book right from your phone. The PICkle Book App is launching soon on iOS and Android!</p>
+                    <a href="#" class="inline-flex items-center space-x-4 font-medium bg-lime-green text-pickle-green border-1 border-lime-green rounded-full ps-6 pe-1.5 py-1.5 text-lg">
+                        <span>Join the waiting app list</span>
+                        <span class="inline-flex items-center justify-center size-8 rounded-full bg-pickle-green">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="size-4 fill-white" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd" d="M8.636 3.5a.5.5 0 0 0-.5-.5H1.5A1.5 1.5 0 0 0 0 4.5v10A1.5 1.5 0 0 0 1.5 16h10a1.5 1.5 0 0 0 1.5-1.5V7.864a.5.5 0 0 0-1 0V14.5a.5.5 0 0 1-.5.5h-10a.5.5 0 0 1-.5-.5v-10a.5.5 0 0 1 .5-.5h6.636a.5.5 0 0 0 .5-.5"/>
+                                <path fill-rule="evenodd" d="M16 .5a.5.5 0 0 0-.5-.5h-5a.5.5 0 0 0 0 1h3.793L6.146 9.146a.5.5 0 1 0 .708.708L15 1.707V5.5a.5.5 0 0 0 1 0z"/>
+                            </svg>
+                        </span>
+                    </a>
+                    <p class="mt-14">Coming Soon - PICkle Book App!</p>
+                    <div class="mt-6 flex space-x-2">
+                        <a href="#">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg" class="h-12">
+                        </a>
+                        <a href="#">
+                            <img src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg" class="h-12">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="bg-cream-green">
+            <div class="max-w-[1280px] mx-auto px-6 py-12 lg:py-48 text-center space-y-12 lg:space-y-24">
+                <div>
+                    <h2 class="font-semibold mb-4">Plans That Fit Your Life and Your Memories</h2>
+                    <p>From capturing everyday moments to the big stuff, there's a PICkle Book for that. Start yours now!</p>
+                </div>
+                <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+                    <div>
+                        <div class="bg-white p-8 rounded-2xl mb-5 max-w-[480px] mx-auto">
+                            <img src="/img/product-1.png" class="mx-auto" />
+                        </div>
+                        <h4 class="font-bold">Mini PICkle</h4>
+                        <p>$8 per month</p>
+                    </div>
+                    <div>
+                        <div class="bg-white p-8 rounded-2xl mb-5 max-w-[480px] mx-auto">
+                            <img src="/img/product-2.png" class="mx-auto" />
+                        </div>
+                        <h4 class="font-bold">Classic PICkle</h4>
+                        <p>$12 per month</p>
+                    </div>
+                    <div>
+                        <div class="bg-white p-8 rounded-2xl mb-5 max-w-[480px] mx-auto">
+                            <img src="/img/product-3.png" class="mx-auto" />
+                        </div>
+                        <h4 class="font-bold">Mega PICkle</h4>
+                        <p>$15 per month</p>
+                    </div>
+                </div>
+
+                <a href="#" class="inline-flex items-center space-x-2 font-medium bg-pickle-green text-white border-1 border-pickle-green rounded-full ps-6 pe-1.5 py-1.5 text-lg">
+                    <span>Get started today</span>
+                    <span class="inline-flex items-center justify-center size-8 rounded-full bg-lime-green">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="size-4 fill-white" viewBox="0 0 16 16">
+                            <path fill-rule="evenodd" d="M8.636 3.5a.5.5 0 0 0-.5-.5H1.5A1.5 1.5 0 0 0 0 4.5v10A1.5 1.5 0 0 0 1.5 16h10a1.5 1.5 0 0 0 1.5-1.5V7.864a.5.5 0 0 0-1 0V14.5a.5.5 0 0 1-.5.5h-10a.5.5 0 0 1-.5-.5v-10a.5.5 0 0 1 .5-.5h6.636a.5.5 0 0 0 .5-.5"/>
+                            <path fill-rule="evenodd" d="M16 .5a.5.5 0 0 0-.5-.5h-5a.5.5 0 0 0 0 1h3.793L6.146 9.146a.5.5 0 1 0 .708.708L15 1.707V5.5a.5.5 0 0 0 1 0z"/>
+                        </svg>
+                    </span>
+                </a>
+            </div>
+        </section>
+
+        <section id="faq" class="max-w-[1280px] mx-auto px-6 py-12 lg:py-24 space-y-12 lg:space-y-24">
+            <div class="text-center">
+                <h2>FAQ - Got Questions?</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+            </div>
+
+            <div class="space-y-4 m">
+                <div class="faq-item active bg-gray-100 rounded-xl overflow-hidden">
+                    <div class="faq-question flex justify-between items-center p-8 cursor-pointer">
+                        <h4 class="font-medium">How does PICkle Book work?</h4>
+                        <div class="text-gray-500">
+                            <svg class="plus-icon w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6"></path>
+                            </svg>
+                            <svg class="minus-icon w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M18 12H6"></path>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="faq-answer px-8 pb-8 text-gray-700 space-y-3">
+                        <p>PICkle Book is a subscription-based service that lets you upload your favorite photos every month and turns them into an organized printed book of photos that is shipped to your house. Just upload, review, and submit — we'll take care of the rest!</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item bg-gray-100 rounded-xl overflow-hidden">
+                    <div class="faq-question flex justify-between items-center p-8 cursor-pointer">
+                        <h4 class="font-medium">How many photos can I upload per month?</h4>
+                        <div class="text-gray-500">
+                            <svg class="plus-icon w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6"></path>
+                            </svg>
+                            <svg class="minus-icon w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M18 12H6"></path>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="faq-answer px-8 pb-8 text-gray-700 space-y-3">
+                        <p>Each book has 50 of your cherished images preserved in an organized book. If you need additional PICkle Books beyond your monthly subscription, you can purchase add on credits.</p>
+                        <p>In order to maintain an amazing low price on PICkle Book, we optimize manufacturing by keeping the book consistent in every way possible. Your PICkle Book will always contain 50 images. If you only upload 30 images in a given monthly anniversary period we will randomly duplicate images to achieve 50 in your book.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item bg-gray-100 rounded-xl overflow-hidden">
+                    <div class="faq-question flex justify-between items-center p-8 cursor-pointer">
+                        <h4 class="font-medium">When will I be charged?</h4>
+                        <div class="text-gray-500">
+                            <svg class="plus-icon w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6"></path>
+                            </svg>
+                            <svg class="minus-icon w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M18 12H6"></path>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="faq-answer px-8 pb-8 text-gray-700 space-y-3">
+                        <p>You will be charged at the start of your subscription membership and then again on your subsequent monthly assigned anniversary day. The anniversary day will match your start day unless you start your subscription on the 26th, 27th, 28th, 29th, 30th, or 31st of a month. In this case your account will have the anniversary day assigned as the 25th of each subsequent month.</p>
+                        <p>We follow this reassignment of the anniversary day due to variability of days in a given month and to optimize our manufacturing process by proactively addressing traditionally heavy volume spikes during the first week of each month.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item bg-gray-100 rounded-xl overflow-hidden">
+                    <div class="faq-question flex justify-between items-center p-8 cursor-pointer">
+                        <h4 class="font-medium">Can I update my shipping address?</h4>
+                        <div class="text-gray-500">
+                            <svg class="plus-icon w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6"></path>
+                            </svg>
+                            <svg class="minus-icon w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M18 12H6"></path>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="faq-answer px-8 pb-8 text-gray-700 space-y-3">
+                        <p>You can update your shipping address at any time under your account settings. Please note that once an order has been submitted to manufacturing, the current address on file has been locked with the order and is not able to be changed.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item bg-gray-100 rounded-xl overflow-hidden">
+                    <div class="faq-question flex justify-between items-center p-8 cursor-pointer">
+                        <h4 class="font-medium">How can I cancel my subscription?</h4>
+                        <div class="text-gray-500">
+                            <svg class="plus-icon w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6"></path>
+                            </svg>
+                            <svg class="minus-icon w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M18 12H6"></path>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="faq-answer px-8 pb-8 text-gray-700 space-y-3">
+                        <p>You can easily cancel your subscription in your account settings. Note that credits purchased will not be refunded. If You cancel your subscription, you will have 90 days from the cancellation date to use the credits in your account. After 90 days, your previously purchased PICkle Book Credits and unused PICkle Book Credits will expire.</p>
+                        <p>If you choose to delete your Account, any outstanding credits in your account at the time of deletion will expire immediately.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item bg-gray-100 rounded-xl overflow-hidden">
+                    <div class="faq-question flex justify-between items-center p-8 cursor-pointer">
+                        <h4 class="font-medium">Is my payment information safe?</h4>
+                        <div class="text-gray-500">
+                            <svg class="plus-icon w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6"></path>
+                            </svg>
+                            <svg class="minus-icon w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M18 12H6"></path>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="faq-answer px-8 pb-8 text-gray-700 space-y-3">
+                        <p>Yes! We utilize a major third-party platform payment service that is widely used by millions of businesses around the world. They hold the highest level of certifications, encryption, and compliance.</p>
+                    </div>
+                </div>
+            </div>
+
+            <p class="text-center">Can't find what you're looking for? Contact us here: <br><a href="#" class="text-lime-green">connect@pickle-book.com</a></p>
+        </section>
+
+        <section class="max-w-[1280px] mx-auto px-6 pt-12 lg:pt-24">
+            <div class="text-center mb-12 lg:mb-24">
+                <h2>PICkle Book Brand Promises</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+            </div>
+            <div class="relative flex flex-col lg:flex-row justify-center items-center lg:items-end space-y-8 lg:space-y-auto">
+                <div class="grid grid-rows-2 gap-8 lg:gap-16 max-w-[260px] lg:absolute lg:top-0 lg:left-0">
+                    <div class="flex gap-4">
+                        <div class="order-2 lg:order-1 grow lg:text-right">
+                            <h4 class="font-bold">Beyond Easy</h4>
+                            <p class="text-[0.88rem]">Hands-down the easies way to print your photos.</p>
+                        </div>
+                        <div class="order-1 lg:order-2 shrink-0 bg-bay-blue rounded-full size-12 inline-flex items-center justify-center">
+                            <img src="/img/promise-1.svg" />
+                        </div>
+                    </div>
+                    <div class="flex gap-4">
+                        <div class="order-2 lg:order-1 grow lg:text-right">
+                            <h4 class="font-bold">Great Quality</h4>
+                            <p class="text-[0.88rem]">Premium paper and ink to last a lifetime.</p>
+                        </div>
+                        <div class="order-1 lg:order-2 shrink-0 bg-mint-green rounded-full size-12 inline-flex items-center justify-center">
+                            <img src="/img/promise-2.svg" />
+                        </div>
+                    </div>
+                </div>
+                <div class="grid grid-rows-2 gap-8 lg:gap-16 max-w-[260px] lg:absolute lg:top-0 lg:right-0">
+                    <div class="flex gap-4">
+                        <div class="order-2 grow">
+                            <h4 class="font-bold">Super Affordable</h4>
+                            <p class="text-[0.88rem]">Straightforward pricing that's kind to your wallet.</p>
+                        </div>
+                        <div class="order-1 shrink-0 bg-muted-pink rounded-full size-12 inline-flex items-center justify-center">
+                            <img src="/img/promise-3.svg" />
+                        </div>
+                    </div>
+                    <div class="flex gap-4">
+                        <div class="order-2 grow">
+                            <h4 class="font-bold">Amazing Service</h4>
+                            <p class="text-[0.88rem]">Our top-notch team is always here to help.</p>
+                        </div>
+                        <div class="order-1 shrink-0 bg-muted-yellow rounded-full size-12 inline-flex items-center justify-center">
+                            <img src="/img/promise-4.svg" />
+                        </div>
+                    </div>
+                </div>
+                <img src="/img/promise.png" class="self-center lg:self-end lg:w-1/2" />
+            </div>
+        </section>
+
+        <section class="bg-pickle-green text-white lg:rounded-4xl max-w-[1440px] mx-auto px-6 py-12 lg:py-24 flex flex-col lg:flex-row items-center gap-6">
+            <div class="shrink-0">
+                <img src="/img/subscribe.png" class="mx-auto">
+            </div>
+            <div class="grow max-w-[450px] mx-auto">
+                <h2 class="font-semibold mb-1">Don't miss a memory, stay updated!</h2>
+                <p class="mb-5">Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit, aperiam repellat.</p>
+                <form class="relative text-base">
+                    <label for="email" class="sr-only">Enter email address</label>
+                    <input id="email" type="email" class="bg-white rounded-full py-3 ps-6 outline-none w-full" placeholder="Enter e-mail">
+                    <button type="submit" class="bg-lime-green absolute top-0 right-0 bottom-0 ps-6 pe-1.5 rounded-full inline-flex items-center space-x-4">
+                        <span>Subscribe</span>
+                        <span class="inline-flex items-center justify-center size-8 rounded-full bg-pickle-green">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="size-4 fill-white" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd" d="M8.636 3.5a.5.5 0 0 0-.5-.5H1.5A1.5 1.5 0 0 0 0 4.5v10A1.5 1.5 0 0 0 1.5 16h10a1.5 1.5 0 0 0 1.5-1.5V7.864a.5.5 0 0 0-1 0V14.5a.5.5 0 0 1-.5.5h-10a.5.5 0 0 1-.5-.5v-10a.5.5 0 0 1 .5-.5h6.636a.5.5 0 0 0 .5-.5"></path>
+                                <path fill-rule="evenodd" d="M16 .5a.5.5 0 0 0-.5-.5h-5a.5.5 0 0 0 0 1h3.793L6.146 9.146a.5.5 0 1 0 .708.708L15 1.707V5.5a.5.5 0 0 0 1 0z"></path>
+                            </svg>
+                        </span>
+                    </button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer class="max-w-[1440px] mx-auto p-6 text-[0.88rem] leading-5 flex flex-col md:flex-row items-center justify-between gap-4">
+        <div class="flex items-center">
+            <span class="me-8">Follow us</span>
+            <div class="flex items-center space-x-3">
+                <a href="#" title="twitter">
+                    <span class="inline-flex items-center justify-center size-8 rounded-full bg-gray-200">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="size-4 fill-pickle-green" viewBox="0 0 16 16">
+                            <path d="M12.6.75h2.454l-5.36 6.142L16 15.25h-4.937l-3.867-5.07-4.425 5.07H.316l5.733-6.57L0 .75h5.063l3.495 4.633L12.601.75Zm-.86 13.028h1.36L4.323 2.145H2.865z"/>
+                        </svg>
+                    </span>
+                </a>
+                <a href="#" title="instagram">
+                    <span class="inline-flex items-center justify-center size-8 rounded-full bg-gray-200">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="size-4 fill-pickle-green" viewBox="0 0 16 16">
+                            <path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.9 3.9 0 0 0-1.417.923A3.9 3.9 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.9 3.9 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.9 3.9 0 0 0-.923-1.417A3.9 3.9 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599s.453.546.598.92c.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.5 2.5 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.5 2.5 0 0 1-.92-.598 2.5 2.5 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233s.008-2.388.046-3.231c.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92s.546-.453.92-.598c.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92m-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217m0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334"/>
+                        </svg>
+                    </span>
+                </a>
+                <a href="#" title="facebook">
+                    <span class="inline-flex items-center justify-center size-8 rounded-full bg-gray-200">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="size-4 fill-pickle-green" viewBox="0 0 16 16">
+                            <path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951"/>
+                        </svg>
+                    </span>
+                </a>
+            </div>
+        </div>
+        <p>&copy; 2025 PICkle Book. All Rights Reserved.</p>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const imageUrl = '/img/marquee.png';
+            const marquee = document.getElementById('marquee');
+            
+            marquee.style.backgroundImage = `url(${imageUrl})`;
+            
+            const img = new Image();
+            img.src = imageUrl;
+            img.onload = function() {
+                const keyframes = `
+                    @keyframes slideRightToLeft {
+                        from {
+                            background-position: 0 0;
+                        }
+                        to {
+                            background-position: -${img.width}px 0;
+                        }
+                    }
+                `;
+                
+                const styleSheet = document.createElement('style');
+                styleSheet.type = 'text/css';
+                styleSheet.innerText = keyframes;
+                document.head.appendChild(styleSheet);
+            };
+        });
+    </script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const slider = document.getElementById('slider');
+            const slides = document.querySelectorAll('.slide');
+            const prevBtn = document.getElementById('prevBtn');
+            const nextBtn = document.getElementById('nextBtn');
+            const paginationDots = document.querySelectorAll('.pagination-dot');
+            
+            let currentIndex = 0;
+            const slideCount = slides.length;
+            
+            // Function to update slider position
+            function updateSlider() {
+                slider.style.transform = `translateX(-${currentIndex * 100}%)`;
+                
+                // Update active pagination dot
+                paginationDots.forEach((dot, index) => {
+                if (index === currentIndex) {
+                    dot.classList.add('active');
+                } else {
+                    dot.classList.remove('active');
+                }
+                });
+            }
+            
+            // Event listeners for navigation buttons
+            prevBtn.addEventListener('click', () => {
+                currentIndex = (currentIndex - 1 + slideCount) % slideCount;
+                updateSlider();
+            });
+            
+            nextBtn.addEventListener('click', () => {
+                currentIndex = (currentIndex + 1) % slideCount;
+                updateSlider();
+            });
+            
+            // Event listeners for pagination dots
+            paginationDots.forEach(dot => {
+                dot.addEventListener('click', () => {
+                currentIndex = parseInt(dot.getAttribute('data-index'));
+                updateSlider();
+                });
+            });
+            
+            // Touch events for mobile swiping
+            let touchStartX = 0;
+            let touchEndX = 0;
+            
+            slider.addEventListener('touchstart', e => {
+                touchStartX = e.changedTouches[0].screenX;
+            });
+            
+            slider.addEventListener('touchend', e => {
+                touchEndX = e.changedTouches[0].screenX;
+                handleSwipe();
+            });
+            
+            function handleSwipe() {
+                const swipeThreshold = 50;
+                if (touchEndX < touchStartX - swipeThreshold) {
+                // Swipe left - go to next slide
+                currentIndex = (currentIndex + 1) % slideCount;
+                updateSlider();
+                } else if (touchEndX > touchStartX + swipeThreshold) {
+                // Swipe right - go to previous slide
+                currentIndex = (currentIndex - 1 + slideCount) % slideCount;
+                updateSlider();
+                }
+            }
+            
+            // Arrow key navigation
+            document.addEventListener('keydown', e => {
+                if (e.key === 'ArrowLeft') {
+                currentIndex = (currentIndex - 1 + slideCount) % slideCount;
+                updateSlider();
+                } else if (e.key === 'ArrowRight') {
+                currentIndex = (currentIndex + 1) % slideCount;
+                updateSlider();
+                }
+            });
+            
+            const autoPlayInterval = 1000; // 5 seconds
+            let slideInterval = setInterval(() => {
+                currentIndex = (currentIndex + 1) % slideCount;
+                updateSlider();
+            }, autoPlayInterval);
+            
+            // Pause auto-play on hover
+            slider.addEventListener('mouseenter', () => {
+                clearInterval(slideInterval);
+            });
+            
+            slider.addEventListener('mouseleave', () => {
+                slideInterval = setInterval(() => {
+                    currentIndex = (currentIndex + 1) % slideCount;
+                    updateSlider();
+                }, autoPlayInterval);
+            });
+        });
+    </script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const faqItems = document.querySelectorAll('.faq-item');
+            
+            faqItems.forEach(item => {
+                const question = item.querySelector('.faq-question');
+                
+                question.addEventListener('click', () => {
+                    // Toggle current item
+                    item.classList.toggle('active');
+                    
+                    // Optional: Close other items when one is opened
+                    // Comment out the block below if you want multiple items to be open simultaneously
+                    faqItems.forEach(otherItem => {
+                        if (otherItem !== item && otherItem.classList.contains('active')) {
+                            otherItem.classList.remove('active');
+                        }
+                    });
+                });
+            });
+        });
+    </script>
+    <script>
+        const menu = document.getElementById('menu-button');
+        const openIcon = document.getElementById('menu-button-open');
+        const closeIcon = document.getElementById('menu-button-close');
+        const nav = document.getElementById('nav');
+
+        menu.addEventListener('click', () => {
+            nav.classList.toggle('hidden');
+
+            if (nav.classList.contains('hidden')) {
+                openIcon.style.display = 'block';
+                closeIcon.style.display = 'none';
+            } else {
+                openIcon.style.display = 'none';
+                closeIcon.style.display = 'block';
+            }
+        });
+    </script>
+</body>
+</html>

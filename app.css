@@ -1,0 +1,220 @@
+html {
+    font-size: 18px;
+    line-height: 28px;
+}
+
+body {
+    color: #252525;
+    font-family: "Figtree", sans-serif;
+    font-optical-sizing: auto;
+}
+
+.bg-pickle-green {
+    background-color: #3b613c;
+}
+
+.bg-lime-green {
+    background-color: #7ece00;
+}
+
+.bg-cream-green {
+    background-color: #f6ffe8;
+}
+
+.bg-mint-green {
+    background-color: #ecffcf;
+}
+
+.bg-muted-yellow {
+    background-color: #fff7dd;
+}
+
+.bg-bay-blue {
+    background-color: #def9ff;
+}
+
+.bg-muted-pink {
+    background-color: #FFDFEE;
+}
+
+.border-pickle-green {
+    border-color: #3b613c;
+}
+
+.text-base {
+    color: #252525;
+}
+
+.text-pickle-green {
+    color: #3b613c;
+}
+
+.text-lime-green {
+    color: #7ece00;
+}
+
+.fill-pickle-green {
+    fill: #3b613c;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: "Host Grotesk", sans-serif;
+    font-optical-sizing: auto;
+}
+
+h1 {
+    font-size: 3.11rem;
+    line-height: 3.77rem;
+}
+
+h2 {
+    font-size: 2.22rem;
+    line-height: 3.11rem;
+}
+
+h3 {
+    font-size: 1.77rem;
+    line-height: 2.44rem;
+}
+
+h4 {
+    font-size: 1.33rem;
+    line-height: 1.77rem;
+}
+
+.marquee-image {
+    display: block;
+    width: 100%;
+    height: 329px;
+    background-repeat: repeat-x;
+    background-position: 0 0;
+    background-size: auto 100%;
+    animation: slideRightToLeft 30s linear infinite;
+}
+
+.slider-container {
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+}
+
+.slider {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.slide {
+    min-width: 100%;
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.nav-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(34, 139, 34, 0.8);
+    color: white;
+    border-radius: 50%;
+    cursor: pointer;
+    z-index: 10;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.prev {
+    left: 20px;
+}
+
+.next {
+    right: 20px;
+}
+
+.pagination {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 8px;
+}
+
+.pagination-dot {
+    width: 30px;
+    height: 5px;
+    background-color: #ffffff;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.pagination-dot.active {
+    background-color: #7ece00;
+}
+
+.faq-answer {
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    transition: max-height 0.3s ease-out, opacity 0.3s ease-out, padding 0.3s ease-out;
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+.faq-item.active {
+    background: #ecffcf !important;
+}
+
+.faq-item.active .faq-answer {
+    max-height: 500px;
+    opacity: 1;
+    transition: max-height 0.3s ease-in, opacity 0.3s ease-in, padding 0.3s ease-in;
+    padding-top: 0;
+    padding-bottom: 1.25rem;
+}
+
+.faq-item.active .plus-icon {
+    display: none;
+}
+
+.faq-item:not(.active) .minus-icon {
+    display: none;
+}
+
+@keyframes slideRightToLeft {
+    from {
+        background-position: 0 0;
+    }
+    to {
+        background-position: -1000px 0; /* Will be adjusted by JS */
+    }
+}
+
+@media (max-width: 80rem) {
+    html {
+        font-size: 15px;
+    }
+}
+
+@media (max-width: 40rem) {
+    html {
+        font-size: 14px;
+    }
+}
